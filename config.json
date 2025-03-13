@@ -1,0 +1,34 @@
+{
+  "general": {
+    "log_directory": "logs",
+    "run_at_startup": true,
+    "minimize_to_tray": true
+  },
+  "monitoring": {
+    "check_interval_seconds": 1,
+    "include_file_extensions": ["*"],
+    "exclude_file_extensions": [".tmp", ".temp", ".lock"],
+    "min_file_size_bytes": 0,
+    "max_file_size_bytes": null
+  },
+  "alerts": {
+    "enable_alerts": true,
+    "alert_threshold_mb": 100,
+    "suspicious_extensions": [".zip", ".rar", ".7z", ".tar", ".gz", ".db", ".sql", ".xlsx", ".docx", ".pdf"],
+    "large_transfer_alert": true,
+    "large_transfer_threshold_mb": 500,
+    "time_based_alerts": {
+      "enabled": true,
+      "restricted_hours": {
+        "start": "18:00",
+        "end": "07:00"
+      },
+      "weekend_alerts": true
+    }
+  },
+  "security": {
+    "hash_algorithm": "sha256",
+    "encrypt_logs": false,
+    "log_retention_days": 90
+  }
+}
