@@ -6,6 +6,7 @@ Uses watchdog to track file system events.
 import os
 import re
 import time
+import fnmatch
 import getpass
 import threading
 from pathlib import Path
